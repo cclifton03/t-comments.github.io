@@ -4,12 +4,9 @@ import * as commentFormService from "components/comments/commentService";
 import commentSchema from "./commentSchema";
 import "../comments/comment2.css";
 import PropTypes from "prop-types";
-import debug from "sabio-debug";
 import toastr from "toastr";
 
-const _logger = debug.extend("CommentForm2");
-
-function CommentForm2({ handleAddComment, entityId, entityTypeId }) {
+function CommentForm({ handleAddComment, entityId, entityTypeId }) {
   const [commentFormLayout] = useState({
     subject: "",
     text: "",
@@ -86,10 +83,10 @@ function CommentForm2({ handleAddComment, entityId, entityTypeId }) {
   );
 }
 
-CommentForm2.propTypes = {
+CommentForm.propTypes = {
   handleAddComment: PropTypes.func.isRequired,
   entityId: PropTypes.number.isRequired,
   entityTypeId: PropTypes.number.isRequired,
 };
 
-export default CommentForm2;
+export default CommentForm;
