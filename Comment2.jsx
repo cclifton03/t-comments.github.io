@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../comments/comment2.css";
 import * as commentFormService from "components/comments/commentService";
-import debug from "sabio-debug";
 import VenueCommentCard from "./CommentCard";
 import PropTypes from "prop-types";
 import CommentForm2 from "components/comments/CommentForm2";
 
-const _logger = debug.extend("VenueComment");
-
-function Comment2({ entity }) {
+function Comment({ entity }) {
   const [comments, setComments] = useState({
     commentsArray: [],
     commentsComponent: [],
@@ -73,4 +70,4 @@ Comment2.propTypes = {
   }),
 };
 
-export default Comment2;
+export default Comment;
